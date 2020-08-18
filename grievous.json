@@ -1,0 +1,20 @@
+{
+    "vault": {
+        "api": {
+            "url": "https://tapvaultdev.azurewebsites.net/",
+            "path": "v1/"
+        },
+        "project": {
+            "token": "s.wxpJnJfj1FuWBmRsUYaFOVoX",
+            "name": "desk-booking-tool/",
+            "engine": "maxrb/data/",
+            "subpath": "backend/devlocal"
+        }
+    },
+    "project": {
+        "name": "Desk Booking Tool",
+        "type": "node",
+        "angularExport": "environment",
+        "envLocation": "./.env"
+    }
+}
