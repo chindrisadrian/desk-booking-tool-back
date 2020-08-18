@@ -1,0 +1,51 @@
+{
+  "name": "desk-booking-tool",
+  "appShortName": "desk-booking-tool",
+  "appLongName": "desk-booking-tool",
+  "version": "0.0.1",
+  "description": "Desk Booking Tool",
+  "main": "app.js",
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint --fix ./app.js ./src/**/*.js",
+    "dev": "env-cmd ./config/dev.env nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docCoverage": "./node_modules/.bin/esdoc && grep -q 100% ./docs/coverage.json",
+    "package-clean": "rm -rf ./tap_package_dir && mkdir tap_package_dir",
+    "grievous-build": "node -e \"require('./node_modules/grievous/index.js').build();\"",
+    "grievous-push": "node -e \"require('./node_modules/grievous/index.js').push();\"",
+    "grievous": "node -e \"require('./node_modules/grievous/index.js').help();\"",
+    "grievous-help": "node -e \"require('./node_modules/grievous/index.js').help();\""
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "author": "None",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "esdoc-ecmascript-proposal-plugin": "^1.0.0",
+    "express": "^4.17.1",
+    "jira-connector": "^3.1.0",
+    "jsonwebtoken": "^8.4.0",
+    "mongoose": "^5.9.7",
+    "multer": "^1.4.2",
+    "validator": "^10.9.0",
+    "winston": "^3.2.1",
+    "winston-azure-application-insights": "^2.0.0",
+    "winston-daily-rotate-file": "^4.3.0",
+    "winston-elasticsearch": "0.8.7"
+  },
+  "devDependencies": {
+    "grievous": "^1.0.7",
+    "env-cmd": "^8.0.2",
+    "esdoc": "^1.1.0",
+    "esdoc-standard-plugin": "^1.0.0",
+    "eslint": "^6.8.0",
+    "eslint-config-google": "^0.14.0",
+    "jest": "^23.6.0",
+    "nodemon": "^1.18.9",
+    "supertest": "^3.4.1"
+  }
+}
